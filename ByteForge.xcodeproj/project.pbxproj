@@ -6,6 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C18829BC2FB5DC0B003E88FA /* ByteReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829AC2FB5DC0B003E88FA /* ByteReader.cpp */; };
+		C18829BD2FB5DC0B003E88FA /* ByteWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829AE2FB5DC0B003E88FA /* ByteWriter.cpp */; };
+		C18829BE2FB5DC0B003E88FA /* FileComparer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829B02FB5DC0B003E88FA /* FileComparer.cpp */; };
+		C18829BF2FB5DC0B003E88FA /* PatternMapWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829B22FB5DC0B003E88FA /* PatternMapWriter.cpp */; };
+		C18829C02FB5DC0B003E88FA /* RegexSequenceFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829B42FB5DC0B003E88FA /* RegexSequenceFinder.cpp */; };
+		C18829C12FB5DC0B003E88FA /* RLECompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829B62FB5DC0B003E88FA /* RLECompressor.cpp */; };
+		C18829C22FB5DC0B003E88FA /* RLEDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829B82FB5DC0B003E88FA /* RLEDecompressor.cpp */; };
+		C18829C32FB5DC0B003E88FA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829BA2FB5DC0B003E88FA /* main.cpp */; };
+		C18829CF2FB5E300003E88FA /* BFGCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829CE2FB5E300003E88FA /* BFGCompressor.cpp */; };
+		C18829D32FB5E600003E88FA /* BFGDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829D12FB5E600003E88FA /* BFGDecompressor.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C18829892FB5CF6F003E88FA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,15 +33,29 @@
 
 /* Begin PBXFileReference section */
 		C188298B2FB5CF6F003E88FA /* ByteForge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ByteForge; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18829AB2FB5DC0B003E88FA /* ByteReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ByteReader.hpp; sourceTree = "<group>"; };
+		C18829AC2FB5DC0B003E88FA /* ByteReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ByteReader.cpp; sourceTree = "<group>"; };
+		C18829AD2FB5DC0B003E88FA /* ByteWriter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ByteWriter.hpp; sourceTree = "<group>"; };
+		C18829AE2FB5DC0B003E88FA /* ByteWriter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ByteWriter.cpp; sourceTree = "<group>"; };
+		C18829AF2FB5DC0B003E88FA /* FileComparer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileComparer.hpp; sourceTree = "<group>"; };
+		C18829B02FB5DC0B003E88FA /* FileComparer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileComparer.cpp; sourceTree = "<group>"; };
+		C18829B12FB5DC0B003E88FA /* PatternMapWriter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PatternMapWriter.hpp; sourceTree = "<group>"; };
+		C18829B22FB5DC0B003E88FA /* PatternMapWriter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PatternMapWriter.cpp; sourceTree = "<group>"; };
+		C18829B32FB5DC0B003E88FA /* RegexSequenceFinder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RegexSequenceFinder.hpp; sourceTree = "<group>"; };
+		C18829B42FB5DC0B003E88FA /* RegexSequenceFinder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RegexSequenceFinder.cpp; sourceTree = "<group>"; };
+		C18829B52FB5DC0B003E88FA /* RLECompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RLECompressor.hpp; sourceTree = "<group>"; };
+		C18829B62FB5DC0B003E88FA /* RLECompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RLECompressor.cpp; sourceTree = "<group>"; };
+		C18829B72FB5DC0B003E88FA /* RLEDecompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RLEDecompressor.hpp; sourceTree = "<group>"; };
+		C18829B82FB5DC0B003E88FA /* RLEDecompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RLEDecompressor.cpp; sourceTree = "<group>"; };
+		C18829BA2FB5DC0B003E88FA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C18829CC2FB5DECF003E88FA /* patterns.bfgmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = patterns.bfgmap; sourceTree = "<group>"; };
+		C18829CE2FB5E1C2003E88FA /* sample.bfg */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.bfg; sourceTree = "<group>"; };
+		C18829CE2FB5E300003E88FA /* BFGCompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BFGCompressor.cpp; sourceTree = "<group>"; };
+		C18829CF2FB5E3B0003E88FA /* rebuilt.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rebuilt.gguf; sourceTree = "<group>"; };
+		C18829D02FB5E300003E88FA /* BFGCompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BFGCompressor.hpp; sourceTree = "<group>"; };
+		C18829D12FB5E600003E88FA /* BFGDecompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BFGDecompressor.cpp; sourceTree = "<group>"; };
+		C18829D22FB5E600003E88FA /* BFGDecompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BFGDecompressor.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C188298D2FB5CF6F003E88FA /* ByteForge */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ByteForge;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C18829882FB5CF6F003E88FA /* Frameworks */ = {
@@ -44,7 +71,7 @@
 		C18829822FB5CF6F003E88FA = {
 			isa = PBXGroup;
 			children = (
-				C188298D2FB5CF6F003E88FA /* ByteForge */,
+				C18829BB2FB5DC0B003E88FA /* ByteForge */,
 				C188298C2FB5CF6F003E88FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +82,75 @@
 				C188298B2FB5CF6F003E88FA /* ByteForge */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C18829B92FB5DC0B003E88FA /* Compression */ = {
+			isa = PBXGroup;
+			children = (
+				C18829D02FB5E300003E88FA /* BFGCompressor.hpp */,
+				C18829CE2FB5E300003E88FA /* BFGCompressor.cpp */,
+				C18829D22FB5E600003E88FA /* BFGDecompressor.hpp */,
+				C18829D12FB5E600003E88FA /* BFGDecompressor.cpp */,
+				C18829B52FB5DC0B003E88FA /* RLECompressor.hpp */,
+				C18829B62FB5DC0B003E88FA /* RLECompressor.cpp */,
+				C18829B72FB5DC0B003E88FA /* RLEDecompressor.hpp */,
+				C18829B82FB5DC0B003E88FA /* RLEDecompressor.cpp */,
+			);
+			path = Compression;
+			sourceTree = "<group>";
+		};
+		C18829BB2FB5DC0B003E88FA /* ByteForge */ = {
+			isa = PBXGroup;
+			children = (
+				C18829CD2FB5DECF003E88FA /* Generated */,
+				C18829C42FB5DC10003E88FA /* Core */,
+				C18829C52FB5DC12003E88FA /* Analysis */,
+				C18829C62FB5DC12003E88FA /* Validation */,
+				C18829B92FB5DC0B003E88FA /* Compression */,
+				C18829BA2FB5DC0B003E88FA /* main.cpp */,
+			);
+			path = ByteForge;
+			sourceTree = "<group>";
+		};
+		C18829C42FB5DC10003E88FA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C18829AB2FB5DC0B003E88FA /* ByteReader.hpp */,
+				C18829AC2FB5DC0B003E88FA /* ByteReader.cpp */,
+				C18829AD2FB5DC0B003E88FA /* ByteWriter.hpp */,
+				C18829AE2FB5DC0B003E88FA /* ByteWriter.cpp */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C18829C52FB5DC12003E88FA /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				C18829B32FB5DC0B003E88FA /* RegexSequenceFinder.hpp */,
+				C18829B42FB5DC0B003E88FA /* RegexSequenceFinder.cpp */,
+				C18829B12FB5DC0B003E88FA /* PatternMapWriter.hpp */,
+				C18829B22FB5DC0B003E88FA /* PatternMapWriter.cpp */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		C18829C62FB5DC12003E88FA /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				C18829AF2FB5DC0B003E88FA /* FileComparer.hpp */,
+				C18829B02FB5DC0B003E88FA /* FileComparer.cpp */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		C18829CD2FB5DECF003E88FA /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				C18829CF2FB5E3B0003E88FA /* rebuilt.gguf */,
+				C18829CE2FB5E1C2003E88FA /* sample.bfg */,
+				C18829CC2FB5DECF003E88FA /* patterns.bfgmap */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +167,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C188298D2FB5CF6F003E88FA /* ByteForge */,
 			);
 			name = ByteForge;
 			packageProductDependencies = (
@@ -120,6 +213,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18829BC2FB5DC0B003E88FA /* ByteReader.cpp in Sources */,
+				C18829BD2FB5DC0B003E88FA /* ByteWriter.cpp in Sources */,
+				C18829BE2FB5DC0B003E88FA /* FileComparer.cpp in Sources */,
+				C18829BF2FB5DC0B003E88FA /* PatternMapWriter.cpp in Sources */,
+				C18829C02FB5DC0B003E88FA /* RegexSequenceFinder.cpp in Sources */,
+				C18829C12FB5DC0B003E88FA /* RLECompressor.cpp in Sources */,
+				C18829C22FB5DC0B003E88FA /* RLEDecompressor.cpp in Sources */,
+				C18829CF2FB5E300003E88FA /* BFGCompressor.cpp in Sources */,
+				C18829D32FB5E600003E88FA /* BFGDecompressor.cpp in Sources */,
+				C18829C32FB5DC0B003E88FA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
