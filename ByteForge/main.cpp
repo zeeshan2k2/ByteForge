@@ -6,17 +6,20 @@
 //
 
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <iomanip>
 #include <vector>
 #include <algorithm>
 #include <filesystem>
 
+#include "Core/ByteReader.hpp"
 #include "Analysis/RegexSequenceFinder.hpp"
 #include "Analysis/PatternMapWriter.hpp"
 #include "Compression/BFGCompressor.hpp"
 #include "Compression/BFGDecompressor.hpp"
+#include "Compression/BFGChunkedCompressor.hpp"
+#include "Compression/BFGChunkedDecompressor.hpp"
+#include "Validation/FileComparer.hpp"
 
 int main(int argc, const char * argv[]) {
     const std::string modelPath = "/Users/zeeshanwaheed/Desktop/C++/ByteForge/samples/synapse-qwen1.5b-first-5000.gguf";
@@ -24,21 +27,16 @@ int main(int argc, const char * argv[]) {
     const std::string patternMapPath = outputDirectory + "/patterns.bfgmap";
     const std::string compressedPath = outputDirectory + "/sample.bfg";
     const std::string decompressedPath = outputDirectory + "/rebuilt.gguf";
-
-    std::ifstream modelFile(modelPath, std::ios::binary);
-
-    if (!modelFile) {
-        std::cerr << "Could not open GGUF file: " << modelPath << '\n';
-        return EXIT_FAILURE;
-    }
+    const std::string chunkedCompressedPath = outputDirectory + "/sample-chunked.bfg";
+    const std::string chunkedDecompressedPath = outputDirectory + "/rebuilt-chunked.gguf";
 
     const int bytesToRead = 5000;
     const int bytesPerChunk = 16;
-    std::vector<unsigned char> buffer(bytesToRead);
-
-    modelFile.read(reinterpret_cast<char*>(buffer.data()), bytesToRead);
-    const std::streamsize bytesRead = modelFile.gcount();
-    buffer.resize(static_cast<std::size_t>(bytesRead));
+    std::vector<unsigned char> buffer;
+    if (!ByteForge::ByteReader::readBytes(modelPath, bytesToRead, buffer)) {
+        std::cerr << "Could not open GGUF file: " << modelPath << '\n';
+        return EXIT_FAILURE;
+    }
 
     for (std::size_t chunkStart = 0; chunkStart < buffer.size(); chunkStart += bytesPerChunk) {
         const std::size_t chunkEnd = std::min(chunkStart + bytesPerChunk, buffer.size());
@@ -102,6 +100,37 @@ int main(int argc, const char * argv[]) {
 
     std::cout << "Decompressed file written: " << decompressedPath << '\n';
     std::cout << "Decompressed bytes: " << decompressionResult.decompressedSize << '\n';
+
+    const ByteForge::FileComparisonResult singleStreamComparison = ByteForge::FileComparer::compare(modelPath, decompressedPath);
+    std::cout << "Single-stream rebuild matches original: "
+              << (singleStreamComparison.matches ? "yes" : "no") << '\n';
+
+    ByteForge::BFGChunkedCompressionResult chunkedCompressionResult{};
+    if (!ByteForge::BFGChunkedCompressor::compress(buffer, 5, chunkedCompressedPath, chunkedCompressionResult)) {
+        std::cerr << "Could not write chunked compressed file: " << chunkedCompressedPath << '\n';
+        return EXIT_FAILURE;
+    }
+
+    std::cout << "Chunked compressed file written: " << chunkedCompressedPath << '\n';
+    std::cout << "Chunk count: " << chunkedCompressionResult.chunkCount << '\n';
+    std::cout << "Chunked dictionary entries used: " << chunkedCompressionResult.totalDictionaryEntries << '\n';
+    std::cout << "Chunked compressed stream bytes: " << chunkedCompressionResult.totalCompressedStreamSize << '\n';
+    std::cout << "Chunked compressed file bytes: " << chunkedCompressionResult.compressedFileSize << '\n';
+
+    ByteForge::BFGChunkedDecompressionResult chunkedDecompressionResult{};
+    if (!ByteForge::BFGChunkedDecompressor::decompress(chunkedCompressedPath,
+                                                       chunkedDecompressedPath,
+                                                       chunkedDecompressionResult)) {
+        std::cerr << "Could not decompress chunked file: " << chunkedCompressedPath << '\n';
+        return EXIT_FAILURE;
+    }
+
+    std::cout << "Chunked decompressed file written: " << chunkedDecompressedPath << '\n';
+    std::cout << "Chunked decompressed bytes: " << chunkedDecompressionResult.decompressedSize << '\n';
+
+    const ByteForge::FileComparisonResult chunkedComparison = ByteForge::FileComparer::compare(modelPath, chunkedDecompressedPath);
+    std::cout << "Chunked rebuild matches original: "
+              << (chunkedComparison.matches ? "yes" : "no") << '\n';
 
     return EXIT_SUCCESS;
 }
