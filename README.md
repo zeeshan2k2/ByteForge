@@ -91,33 +91,6 @@ N bytes   pattern bytes
 N bytes   compressed stream
 ```
 
-## Project Structure
-
-```text
-ByteForge/
-  Analysis/
-    PatternMapWriter.*
-    RegexSequenceFinder.*
-
-  Compression/
-    BFGCompressor.*
-    BFGDecompressor.*
-    BFGChunkedCompressor.*
-    BFGChunkedDecompressor.*
-
-  Core/
-    ByteReader.*
-    ByteWriter.*
-
-  Validation/
-    FileComparer.*
-
-  Generated/
-    ignored generated output files
-
-  main.cpp
-```
-
 ## Generated Files
 
 `ByteForge/Generated/` is ignored by git. It contains generated benchmark artifacts such as:
