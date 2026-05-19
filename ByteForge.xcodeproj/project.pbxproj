@@ -17,6 +17,11 @@
 		C18829D32FB5E600003E88FA /* BFGDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829D12FB5E600003E88FA /* BFGDecompressor.cpp */; };
 		C18829D42FB5E578003E88FA /* BFGChunkedCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829D12FB5E578003E88FA /* BFGChunkedCompressor.cpp */; };
 		C18829D52FB5E578003E88FA /* BFGChunkedDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829D32FB5E578003E88FA /* BFGChunkedDecompressor.cpp */; };
+		C1882E102FB90000003E88FA /* NibbleDictionaryBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E022FB90000003E88FA /* NibbleDictionaryBuilder.cpp */; };
+		C1882E112FB90000003E88FA /* NibbleCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E042FB90000003E88FA /* NibbleCompressor.cpp */; };
+		C1882E122FB90000003E88FA /* NibbleDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E062FB90000003E88FA /* NibbleDecompressor.cpp */; };
+		C1882E132FB90010003E88FA /* NibbleChunkedCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E092FB90010003E88FA /* NibbleChunkedCompressor.cpp */; };
+		C1882E142FB90010003E88FA /* NibbleChunkedDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E0B2FB90010003E88FA /* NibbleChunkedDecompressor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +60,17 @@
 		C18829D22FB5E578003E88FA /* BFGChunkedDecompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BFGChunkedDecompressor.hpp; sourceTree = "<group>"; };
 		C18829D22FB5E600003E88FA /* BFGDecompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BFGDecompressor.hpp; sourceTree = "<group>"; };
 		C18829D32FB5E578003E88FA /* BFGChunkedDecompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BFGChunkedDecompressor.cpp; sourceTree = "<group>"; };
+		C1882E012FB90000003E88FA /* NibbleDictionaryBuilder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NibbleDictionaryBuilder.hpp; sourceTree = "<group>"; };
+		C1882E022FB90000003E88FA /* NibbleDictionaryBuilder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NibbleDictionaryBuilder.cpp; sourceTree = "<group>"; };
+		C1882E032FB90000003E88FA /* NibbleCompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NibbleCompressor.hpp; sourceTree = "<group>"; };
+		C1882E042FB90000003E88FA /* NibbleCompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NibbleCompressor.cpp; sourceTree = "<group>"; };
+		C1882E052FB90000003E88FA /* NibbleDecompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NibbleDecompressor.hpp; sourceTree = "<group>"; };
+		C1882E062FB90000003E88FA /* NibbleDecompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NibbleDecompressor.cpp; sourceTree = "<group>"; };
+		C1882E072FB90000003E88FA /* NibbleFormat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NibbleFormat.hpp; sourceTree = "<group>"; };
+		C1882E082FB90010003E88FA /* NibbleChunkedCompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NibbleChunkedCompressor.hpp; sourceTree = "<group>"; };
+		C1882E092FB90010003E88FA /* NibbleChunkedCompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NibbleChunkedCompressor.cpp; sourceTree = "<group>"; };
+		C1882E0A2FB90010003E88FA /* NibbleChunkedDecompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NibbleChunkedDecompressor.hpp; sourceTree = "<group>"; };
+		C1882E0B2FB90010003E88FA /* NibbleChunkedDecompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NibbleChunkedDecompressor.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +123,7 @@
 				C18829C52FB5DC12003E88FA /* Analysis */,
 				C18829C62FB5DC12003E88FA /* Validation */,
 				C18829B92FB5DC0B003E88FA /* Compression */,
+				C1882E002FB90000003E88FA /* Nibble */,
 				C18829BA2FB5DC0B003E88FA /* main.cpp */,
 			);
 			path = ByteForge;
@@ -151,6 +168,24 @@
 				C18829CC2FB5DECF003E88FA /* patterns.bfgmap */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		C1882E002FB90000003E88FA /* Nibble */ = {
+			isa = PBXGroup;
+			children = (
+				C1882E072FB90000003E88FA /* NibbleFormat.hpp */,
+				C1882E012FB90000003E88FA /* NibbleDictionaryBuilder.hpp */,
+				C1882E022FB90000003E88FA /* NibbleDictionaryBuilder.cpp */,
+				C1882E032FB90000003E88FA /* NibbleCompressor.hpp */,
+				C1882E042FB90000003E88FA /* NibbleCompressor.cpp */,
+				C1882E052FB90000003E88FA /* NibbleDecompressor.hpp */,
+				C1882E062FB90000003E88FA /* NibbleDecompressor.cpp */,
+				C1882E082FB90010003E88FA /* NibbleChunkedCompressor.hpp */,
+				C1882E092FB90010003E88FA /* NibbleChunkedCompressor.cpp */,
+				C1882E0A2FB90010003E88FA /* NibbleChunkedDecompressor.hpp */,
+				C1882E0B2FB90010003E88FA /* NibbleChunkedDecompressor.cpp */,
+			);
+			path = Nibble;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +257,11 @@
 				C18829C02FB5DC0B003E88FA /* RegexSequenceFinder.cpp in Sources */,
 				C18829CF2FB5E300003E88FA /* BFGCompressor.cpp in Sources */,
 				C18829D32FB5E600003E88FA /* BFGDecompressor.cpp in Sources */,
+				C1882E102FB90000003E88FA /* NibbleDictionaryBuilder.cpp in Sources */,
+				C1882E112FB90000003E88FA /* NibbleCompressor.cpp in Sources */,
+				C1882E122FB90000003E88FA /* NibbleDecompressor.cpp in Sources */,
+				C1882E132FB90010003E88FA /* NibbleChunkedCompressor.cpp in Sources */,
+				C1882E142FB90010003E88FA /* NibbleChunkedDecompressor.cpp in Sources */,
 				C18829C32FB5DC0B003E88FA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
