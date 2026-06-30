@@ -57,6 +57,38 @@ double elapsedMilliseconds(std::chrono::steady_clock::time_point start,
     return std::chrono::duration<double, std::milli>(end - start).count();
 }
 
+std::string formatElapsedTime(double milliseconds) {
+    std::ostringstream output;
+    output << std::fixed << std::setprecision(3);
+
+    if (milliseconds < 1000.0) {
+        output << milliseconds << " ms";
+        return output.str();
+    }
+
+    const double seconds = milliseconds / 1000.0;
+    if (seconds < 60.0) {
+        output << seconds << " s";
+        return output.str();
+    }
+
+    const double minutes = seconds / 60.0;
+    if (minutes < 60.0) {
+        output << minutes << " min";
+        return output.str();
+    }
+
+    const double hours = minutes / 60.0;
+    if (hours < 24.0) {
+        output << hours << " hr";
+        return output.str();
+    }
+
+    const double days = hours / 24.0;
+    output << days << " d";
+    return output.str();
+}
+
 int readMenuChoice() {
     int choice = 0;
     std::cin >> choice;
@@ -221,12 +253,12 @@ bool runNibbleTest(const std::string& inputPath,
     std::cout << "Compressed file bytes: " << compressionResult.compressedFileSize << '\n';
     std::cout << "Saved: " << std::fixed << std::setprecision(2)
               << savedPercent(compressionResult.originalSize, compressionResult.compressedFileSize) << "%\n";
-    std::cout << "Compression time: " << std::fixed << std::setprecision(3)
-              << elapsedMilliseconds(compressionStart, compressionEnd) << " ms\n";
-    std::cout << "Decompression time: " << std::fixed << std::setprecision(3)
-              << elapsedMilliseconds(decompressionStart, decompressionEnd) << " ms\n";
-    std::cout << "Total test time: " << std::fixed << std::setprecision(3)
-              << elapsedMilliseconds(totalStart, totalEnd) << " ms\n";
+    std::cout << "Compression time: "
+              << formatElapsedTime(elapsedMilliseconds(compressionStart, compressionEnd)) << '\n';
+    std::cout << "Decompression time: "
+              << formatElapsedTime(elapsedMilliseconds(decompressionStart, decompressionEnd)) << '\n';
+    std::cout << "Total test time: "
+              << formatElapsedTime(elapsedMilliseconds(totalStart, totalEnd)) << '\n';
     std::cout << "Rebuilt bytes: " << decompressionResult.decompressedSize << '\n';
     std::cout << "Rebuild matches source: " << (comparison.matches ? "yes" : "no") << '\n';
     std::cout << "Compressed file: " << compressedPath << '\n';

@@ -22,6 +22,27 @@
 		C1882E122FB90000003E88FA /* NibbleDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E062FB90000003E88FA /* NibbleDecompressor.cpp */; };
 		C1882E132FB90010003E88FA /* NibbleChunkedCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E092FB90010003E88FA /* NibbleChunkedCompressor.cpp */; };
 		C1882E142FB90010003E88FA /* NibbleChunkedDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E0B2FB90010003E88FA /* NibbleChunkedDecompressor.cpp */; };
+		C1882F102FCA0000003E88FA /* ByteForgeUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1882F002FCA0000003E88FA /* ByteForgeUIApp.swift */; };
+		C1882F112FCA0000003E88FA /* ResearchDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1882F012FCA0000003E88FA /* ResearchDashboardView.swift */; };
+		C1882F122FCA0000003E88FA /* ResearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1882F022FCA0000003E88FA /* ResearchViewModel.swift */; };
+		C1882F132FCA0000003E88FA /* MetricCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1882F032FCA0000003E88FA /* MetricCard.swift */; };
+		C1882F142FCA0000003E88FA /* ByteForgeAnalysisService.mm in Sources */ = {isa = PBXBuildFile; fileRef = C1882F052FCA0000003E88FA /* ByteForgeAnalysisService.mm */; };
+		C1882F152FCA0000003E88FA /* ByteDistributionAnalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882F082FCA0000003E88FA /* ByteDistributionAnalyzer.cpp */; };
+		C1882F162FCA0000003E88FA /* CompressionExperimentRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882F0A2FCA0000003E88FA /* CompressionExperimentRunner.cpp */; };
+		C1882F172FCA0000003E88FA /* ByteReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829AC2FB5DC0B003E88FA /* ByteReader.cpp */; };
+		C1882F182FCA0000003E88FA /* ByteWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829AE2FB5DC0B003E88FA /* ByteWriter.cpp */; };
+		C1882F192FCA0000003E88FA /* FileComparer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829B02FB5DC0B003E88FA /* FileComparer.cpp */; };
+		C1882F1A2FCA0000003E88FA /* PatternMapWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829B22FB5DC0B003E88FA /* PatternMapWriter.cpp */; };
+		C1882F1B2FCA0000003E88FA /* RegexSequenceFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829B42FB5DC0B003E88FA /* RegexSequenceFinder.cpp */; };
+		C1882F1C2FCA0000003E88FA /* BFGCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829CE2FB5E300003E88FA /* BFGCompressor.cpp */; };
+		C1882F1D2FCA0000003E88FA /* BFGDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829D12FB5E600003E88FA /* BFGDecompressor.cpp */; };
+		C1882F1E2FCA0000003E88FA /* BFGChunkedCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829D12FB5E578003E88FA /* BFGChunkedCompressor.cpp */; };
+		C1882F1F2FCA0000003E88FA /* BFGChunkedDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18829D32FB5E578003E88FA /* BFGChunkedDecompressor.cpp */; };
+		C1882F202FCA0000003E88FA /* NibbleDictionaryBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E022FB90000003E88FA /* NibbleDictionaryBuilder.cpp */; };
+		C1882F212FCA0000003E88FA /* NibbleCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E042FB90000003E88FA /* NibbleCompressor.cpp */; };
+		C1882F222FCA0000003E88FA /* NibbleDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E062FB90000003E88FA /* NibbleDecompressor.cpp */; };
+		C1882F232FCA0000003E88FA /* NibbleChunkedCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E092FB90010003E88FA /* NibbleChunkedCompressor.cpp */; };
+		C1882F242FCA0000003E88FA /* NibbleChunkedDecompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1882E0B2FB90010003E88FA /* NibbleChunkedDecompressor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,10 +92,29 @@
 		C1882E092FB90010003E88FA /* NibbleChunkedCompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NibbleChunkedCompressor.cpp; sourceTree = "<group>"; };
 		C1882E0A2FB90010003E88FA /* NibbleChunkedDecompressor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NibbleChunkedDecompressor.hpp; sourceTree = "<group>"; };
 		C1882E0B2FB90010003E88FA /* NibbleChunkedDecompressor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NibbleChunkedDecompressor.cpp; sourceTree = "<group>"; };
+		C1882F002FCA0000003E88FA /* ByteForgeUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteForgeUIApp.swift; sourceTree = "<group>"; };
+		C1882F012FCA0000003E88FA /* ResearchDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchDashboardView.swift; sourceTree = "<group>"; };
+		C1882F022FCA0000003E88FA /* ResearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchViewModel.swift; sourceTree = "<group>"; };
+		C1882F032FCA0000003E88FA /* MetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCard.swift; sourceTree = "<group>"; };
+		C1882F042FCA0000003E88FA /* ByteForgeAnalysisService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteForgeAnalysisService.h; sourceTree = "<group>"; };
+		C1882F052FCA0000003E88FA /* ByteForgeAnalysisService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ByteForgeAnalysisService.mm; sourceTree = "<group>"; };
+		C1882F062FCA0000003E88FA /* ByteForgeUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ByteForgeUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		C1882F072FCA0000003E88FA /* ByteDistributionAnalyzer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ByteDistributionAnalyzer.hpp; sourceTree = "<group>"; };
+		C1882F082FCA0000003E88FA /* ByteDistributionAnalyzer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ByteDistributionAnalyzer.cpp; sourceTree = "<group>"; };
+		C1882F092FCA0000003E88FA /* CompressionExperimentRunner.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CompressionExperimentRunner.hpp; sourceTree = "<group>"; };
+		C1882F0A2FCA0000003E88FA /* CompressionExperimentRunner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CompressionExperimentRunner.cpp; sourceTree = "<group>"; };
+		C1882F0D2FCA0000003E88FA /* ByteForgeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteForgeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C18829882FB5CF6F003E88FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1882F262FCA0000003E88FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,6 +127,7 @@
 		C18829822FB5CF6F003E88FA = {
 			isa = PBXGroup;
 			children = (
+				C1882F252FCA0000003E88FA /* ByteForgeUI */,
 				C18829BB2FB5DC0B003E88FA /* ByteForge */,
 				C188298C2FB5CF6F003E88FA /* Products */,
 			);
@@ -96,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C188298B2FB5CF6F003E88FA /* ByteForge */,
+				C1882F0D2FCA0000003E88FA /* ByteForgeUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +166,7 @@
 				C18829C62FB5DC12003E88FA /* Validation */,
 				C18829B92FB5DC0B003E88FA /* Compression */,
 				C1882E002FB90000003E88FA /* Nibble */,
+				C1882F282FCA0000003E88FA /* Research */,
 				C18829BA2FB5DC0B003E88FA /* main.cpp */,
 			);
 			path = ByteForge;
@@ -188,6 +231,63 @@
 			path = Nibble;
 			sourceTree = "<group>";
 		};
+		C1882F252FCA0000003E88FA /* ByteForgeUI */ = {
+			isa = PBXGroup;
+			children = (
+				C1882F272FCA0000003E88FA /* App */,
+				C1882F292FCA0000003E88FA /* Views */,
+				C1882F2A2FCA0000003E88FA /* ViewModels */,
+				C1882F2B2FCA0000003E88FA /* Bridge */,
+			);
+			path = ByteForgeUI;
+			sourceTree = "<group>";
+		};
+		C1882F272FCA0000003E88FA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C1882F002FCA0000003E88FA /* ByteForgeUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C1882F282FCA0000003E88FA /* Research */ = {
+			isa = PBXGroup;
+			children = (
+				C1882F072FCA0000003E88FA /* ByteDistributionAnalyzer.hpp */,
+				C1882F082FCA0000003E88FA /* ByteDistributionAnalyzer.cpp */,
+				C1882F092FCA0000003E88FA /* CompressionExperimentRunner.hpp */,
+				C1882F0A2FCA0000003E88FA /* CompressionExperimentRunner.cpp */,
+			);
+			path = Research;
+			sourceTree = "<group>";
+		};
+		C1882F292FCA0000003E88FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1882F012FCA0000003E88FA /* ResearchDashboardView.swift */,
+				C1882F032FCA0000003E88FA /* MetricCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1882F2A2FCA0000003E88FA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C1882F022FCA0000003E88FA /* ResearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C1882F2B2FCA0000003E88FA /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				C1882F042FCA0000003E88FA /* ByteForgeAnalysisService.h */,
+				C1882F052FCA0000003E88FA /* ByteForgeAnalysisService.mm */,
+				C1882F062FCA0000003E88FA /* ByteForgeUI-Bridging-Header.h */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,6 +310,25 @@
 			productReference = C188298B2FB5CF6F003E88FA /* ByteForge */;
 			productType = "com.apple.product-type.tool";
 		};
+		C1882F0E2FCA0000003E88FA /* ByteForgeUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1882F322FCA0000003E88FA /* Build configuration list for PBXNativeTarget "ByteForgeUI" */;
+			buildPhases = (
+				C1882F272FCA0001003E88FA /* Sources */,
+				C1882F262FCA0000003E88FA /* Frameworks */,
+				C1882F2C2FCA0000003E88FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ByteForgeUI;
+			packageProductDependencies = (
+			);
+			productName = ByteForgeUI;
+			productReference = C1882F0D2FCA0000003E88FA /* ByteForgeUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,6 +339,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					C188298A2FB5CF6F003E88FA = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					C1882F0E2FCA0000003E88FA = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -239,9 +361,20 @@
 			projectRoot = "";
 			targets = (
 				C188298A2FB5CF6F003E88FA /* ByteForge */,
+				C1882F0E2FCA0000003E88FA /* ByteForgeUI */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1882F2C2FCA0000003E88FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C18829872FB5CF6F003E88FA /* Sources */ = {
@@ -263,6 +396,34 @@
 				C1882E132FB90010003E88FA /* NibbleChunkedCompressor.cpp in Sources */,
 				C1882E142FB90010003E88FA /* NibbleChunkedDecompressor.cpp in Sources */,
 				C18829C32FB5DC0B003E88FA /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1882F272FCA0001003E88FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1882F102FCA0000003E88FA /* ByteForgeUIApp.swift in Sources */,
+				C1882F112FCA0000003E88FA /* ResearchDashboardView.swift in Sources */,
+				C1882F122FCA0000003E88FA /* ResearchViewModel.swift in Sources */,
+				C1882F132FCA0000003E88FA /* MetricCard.swift in Sources */,
+				C1882F142FCA0000003E88FA /* ByteForgeAnalysisService.mm in Sources */,
+				C1882F152FCA0000003E88FA /* ByteDistributionAnalyzer.cpp in Sources */,
+				C1882F162FCA0000003E88FA /* CompressionExperimentRunner.cpp in Sources */,
+				C1882F172FCA0000003E88FA /* ByteReader.cpp in Sources */,
+				C1882F182FCA0000003E88FA /* ByteWriter.cpp in Sources */,
+				C1882F192FCA0000003E88FA /* FileComparer.cpp in Sources */,
+				C1882F1A2FCA0000003E88FA /* PatternMapWriter.cpp in Sources */,
+				C1882F1B2FCA0000003E88FA /* RegexSequenceFinder.cpp in Sources */,
+				C1882F1C2FCA0000003E88FA /* BFGCompressor.cpp in Sources */,
+				C1882F1D2FCA0000003E88FA /* BFGDecompressor.cpp in Sources */,
+				C1882F1E2FCA0000003E88FA /* BFGChunkedCompressor.cpp in Sources */,
+				C1882F1F2FCA0000003E88FA /* BFGChunkedDecompressor.cpp in Sources */,
+				C1882F202FCA0000003E88FA /* NibbleDictionaryBuilder.cpp in Sources */,
+				C1882F212FCA0000003E88FA /* NibbleCompressor.cpp in Sources */,
+				C1882F222FCA0000003E88FA /* NibbleDecompressor.cpp in Sources */,
+				C1882F232FCA0000003E88FA /* NibbleChunkedCompressor.cpp in Sources */,
+				C1882F242FCA0000003E88FA /* NibbleChunkedDecompressor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +567,50 @@
 			};
 			name = Release;
 		};
+		C1882F302FCA0000003E88FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 232C7N3DDY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeeshanwaheed.ByteForgeUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "ByteForgeUI/Bridge/ByteForgeUI-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C1882F312FCA0000003E88FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 232C7N3DDY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeeshanwaheed.ByteForgeUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "ByteForgeUI/Bridge/ByteForgeUI-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +628,15 @@
 			buildConfigurations = (
 				C18829932FB5CF6F003E88FA /* Debug */,
 				C18829942FB5CF6F003E88FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1882F322FCA0000003E88FA /* Build configuration list for PBXNativeTarget "ByteForgeUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1882F302FCA0000003E88FA /* Debug */,
+				C1882F312FCA0000003E88FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
