@@ -25,7 +25,20 @@ struct ResearchDashboardView: View {
                 .font(.system(size: 30, weight: .bold, design: .rounded))
             Text("Research dashboard for running the current ByteForge compression experiments against a sample or a custom file.")
                 .foregroundStyle(.secondary)
+            tokenWidthLegend
         }
+    }
+
+    private var tokenWidthLegend: some View {
+        Grid(horizontalSpacing: 12, verticalSpacing: 12) {
+            GridRow {
+                MetricCard(title: "nib", value: "2 bits")
+                MetricCard(title: "nibble", value: "4 bits")
+                MetricCard(title: "sixbit", value: "6 bits")
+                MetricCard(title: "byte", value: "8 bits")
+            }
+        }
+        .padding(.top, 4)
     }
 
     private var sourceSection: some View {
